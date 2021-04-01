@@ -12,7 +12,7 @@ jobs:
       - name: download
         run: |
           sudo apt-get update
-          sudo apt-get install ffmpeg curl zip -y
+          sudo apt-get install ffmpeg curl zip atomicparsley -y
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           curl -LJO https://github.com/ytdl-org/youtube-dl/releases/latest/download/youtube-dl
